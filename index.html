@@ -9,7 +9,7 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="apple-mobile-web-app-title" content="EN13480 Rör">
-  <link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAYAAAA9zQYyAAACS0lEQVR4nO3WMU7DUBRFQYKok86L8/6SvSWdVxAqEFgCpwjy52imtYtXHF39w/F8vb9AxOveB8AzCZoUQZMiaFIETYqgSRE0KYImRdCkCJoUQZMiaFIETYqgSRE0KYImRdCkCJoUQZMiaFIETYqgSRE0KYImRdCkCJoUQZMiaFIETYqgSRE0KYImRdCkCJoUQZMiaFIETYqgSRE0KYImRdCkCJoUQZMiaFIETYqgSRE0KYImRdCkCJoUQZMiaFIETYqgSRE0KYImRdCkCJoUQZMiaFIETYqgSRE0KYImRdCkCJoUQZMiaFIETYqgSRE0KYImRdCkCJoUQZMiaFIETYqgSRE0KYImRdCkCJqUt70PGNUyT79+P11u3/45XW5/fRIPEPSGdagfES/z9Bm1mMfhybFhmafNtWYcFnrDT+u7fnIwBgv9ACv9fwh6w9eQ11F7O4/ncDxf73sfAc9ioUkRNCmCJkXQpAiaFEGTImhSBE2KoEkRNCmCJkXQpAiaFEGTImhSBE2KoEkRNCmCJkXQpAiaFEGTImhSBE2KoEkRNCmCJkXQpAiaFEGTImhSBE2KoEkRNCmCJkXQpAiaFEGTImhSBE2KoEkRNCmCJkXQpAiaFEGTImhSBE2KoEkRNCmCJkXQpAiaFEGTImhSBE2KoEkRNCmCJkXQpAiaFEGTImhSBE2KoEkRNCmCJkXQpAiaFEGTImhSBE2KoEkRNCmCJkXQpAiaFEGTImhSBE2KoEkRNCmCJkXQpAiaFEGTImhSBE2KoEkRNCnvB7YkJ1SYUqoAAAAASUVORK5CYII=">
+  <link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAYAAAA9zQYyAAACS0lEQVR4nO3WMU7DUBRFQYKok86L8/6SvSWdVxAqEFgCpwjy52imtYtXHF39w/F8vb9AxOveB8AzCZoUQZMiaFIETYqgS[...]">
   <meta name="theme-color" content="#0ea5e9">
 
   <style>
@@ -86,7 +86,7 @@
       </div>
       <div class="toolbar no-print">
         <button class="btn" id="exportBtn" title="Skriv ut / spara som PDF" aria-label="Exportera till PDF">
-          <svg viewBox="0 0 24 24" fill="none"><path d="M7 9V3h10v6M6 14H5a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2h-1M7 14h10v7H7v-7Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg viewBox="0 0 24 24" fill="none"><path d="M7 9V3h10v6M6 14H5a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2h-1M7 14h10v7H7v-7Z" stroke="currentColor" stroke-width="1.5"></path></svg>
           Exportera till PDF
         </button>
       </div>
@@ -160,6 +160,24 @@
             </div>
           </div>
 
+          <div class="spacer"></div>
+
+          <!-- Säkerhetsfaktorer: flyttade in i Indata-kortet -->
+          <div>
+            <label><input type="checkbox" id="gOvr"> Tillåt manuell överstyrning av säkerhetsfaktorer (γM, γR)</label>
+            <div class="row" id="gammaRow" style="display:none;margin-top:8px">
+              <div>
+                <label for="gM">γM</label>
+                <input id="gM" type="text" value="1.5">
+              </div>
+              <div>
+                <label for="gR">γR</label>
+                <input id="gR" type="text" value="2.4">
+              </div>
+            </div>
+            <div class="small">Standard: γM=1,5 och γR=2,4. Utan överstyrning används exakt dessa värden.</div>
+          </div>
+
         </div>
       </div>
 
@@ -172,24 +190,6 @@
     </div>
 
     <div class="spacer"></div>
-
-    <div class="card">
-      <div class="card-header"><h2>Säkerhetsfaktorer</h2></div>
-      <div class="card-body grid">
-        <label><input type="checkbox" id="gOvr"> Tillåt manuell överstyrning av säkerhetsfaktorer (γM, γR)</label>
-        <div class="row" id="gammaRow" style="display:none">
-          <div>
-            <label for="gM">γM</label>
-            <input id="gM" type="text" value="1.5">
-          </div>
-          <div>
-            <label for="gR">γR</label>
-            <input id="gR" type="text" value="2.4">
-          </div>
-        </div>
-        <div class="small">Standard: γM=1,5 och γR=2,4. Utan överstyrning används exakt dessa värden.</div>
-      </div>
-    </div>
 
     <footer class="footer">
       <div>skapad av JL</div>
