@@ -3,7 +3,7 @@
     "P235GH": {
       "Rm_RT": 360,
       "Re_RT": 235,
-      "note": "Gäller för godstjocklek t ≤ 60 mm",
+      "note": "Gäller för godstjocklek t ≤ 16 mm",
       "temp": [
         { "T": 100, "Re": 198 },
         { "T": 150, "Re": 187 },
